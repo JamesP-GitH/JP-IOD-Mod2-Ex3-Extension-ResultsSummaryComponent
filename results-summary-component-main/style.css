@@ -1,0 +1,225 @@
+:root {
+    --text-color-main: hsla(0, 0%, 100%, 1);
+    --text-color-main-opac: hsla(0, 0%, 100%, 0.6);
+    --text-color-main-opac2: hsla(0, 0%, 100%, 0.3);
+
+    --text-color-sum: hsl(224, 30%, 27%);
+    --text-color-sum-opac: hsla(224, 30%, 27%, 0.6);
+
+    --backgound-color-main: hsl(221, 100%, 96%);
+    --background-color-container: hsl(0, 0%, 100%);
+
+    --background-color-gradient1: hsl(252, 100%, 67%);
+    --background-color-gradient2: hsl(241, 81%, 54%);
+
+    --background-color-circle-gradient1: hsla(256, 72%, 46%, 1);
+    --background-color-circle-gradient2: hsla(241, 72%, 46%, 0);
+
+    --background-color-cont-butn: hsl(224, 30%, 27%);
+
+    --background-color-reaction: hsla(0, 100%, 67%, 0.1);
+    --background-color-memory: hsla(39, 100%, 56%, 0.1);
+    --background-color-verbal: hsla(166, 100%, 37%, 0.1);
+    --background-color-visual: hsla(234, 85%, 45%, 0.1);
+
+    --text-color-reaction: hsla(0, 100%, 67%, 1);
+    --text-color-memory: hsla(39, 100%, 56%, 1);
+    --text-color-verbal: hsla(166, 100%, 37%, 1);
+    --text-color-visual: hsla(234, 85%, 45%, 1);
+}
+
+.hanken-grotesk {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.whiteText {
+    color: var(--text-color-main);
+}
+
+.whiteTextOpac {
+    color: var(--text-color-main-opac);
+}
+
+.whiteTextOpac2 {
+    color: var(--text-color-main-opac2);
+}
+
+body {
+    background-color: var(--backgound-color-main);
+}
+
+.flexWrap {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 28px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgound-color-main);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: calc(100vh - 55%);
+    background-color: var(--background-color-container);
+    border-radius: 30px;
+    align-items: stretch;
+}
+
+.summary,
+.mainResult {
+    flex: 1;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mainResult {
+    background: linear-gradient(to bottom, var(--background-color-gradient1), var(--background-color-gradient2));
+}
+
+.mainScore {
+    width: 10em;
+    height: 10em;
+    background: linear-gradient(to bottom, var(--background-color-circle-gradient1), var(--background-color-circle-gradient2));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.yourResult,
+.summaryHead {
+    font-size: 1.3em;
+}
+
+.percentageAverage {
+    font-size: 16px;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.motivation {
+    font-size: 26px;
+}
+
+.scoreBig {
+    font-size: 54px;
+    font-weight: 700;
+}
+
+/*===== SUMMARY SIDE ======*/
+
+.summary {
+    background-color: var(--background-color-container);
+}
+
+.summaryCont {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.summaryHead {
+    width: 80%;
+    font-weight: 700;
+    text-align: left;
+}
+
+.flexScores {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    width: 100%;
+    padding: 12px;
+    margin: 5px;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.flexInlet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*--Reaction--*/
+.reactionScore {
+    background-color: var(--background-color-reaction);
+}
+
+.reaction {
+    color: var(--text-color-reaction);
+    padding: 0px 8px;
+}
+
+/*--Memory--*/
+.memoryScore {
+    background-color: var(--background-color-memory);
+}
+
+.memory {
+    color: var(--text-color-memory);
+    padding: 0px 8px;
+}
+
+/*--Verbal--*/
+.verbalScore {
+    background-color: var(--background-color-verbal);
+}
+
+.verbal {
+    color: var(--text-color-verbal);
+    padding: 0px 8px;
+}
+
+/*--Visual--*/
+.visualScore {
+    background-color: var(--background-color-visual);
+}
+
+.visual {
+    color: var(--text-color-visual);
+    padding: 0px 8px;
+}
+
+.visualNum,
+.verbalNum,
+.memoryNum,
+.reactionNum {
+    font-weight: 800;
+    color: var(--text-color-sum);
+}
+
+.visualNum2,
+.verbalNum2,
+.memoryNum2,
+.reactionNum2 {
+    color: var(--text-color-sum-opac);
+    padding: 0 0 0 5px;
+}
+
+/*--Continue Button--*/
+.continue {
+    width: 80%;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    color: var(--text-color-main);
+    background-color: var(--background-color-cont-butn);
+}
