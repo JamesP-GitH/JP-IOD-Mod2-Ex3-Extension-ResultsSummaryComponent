@@ -219,7 +219,13 @@ body {
     width: 80%;
     padding: 15px;
     border-radius: 30px;
+    border: none;
     text-align: center;
     color: var(--text-color-main);
     background-color: var(--background-color-cont-butn);
+}
+
+.continue:hover {
+    background: linear-gradient(to bottom, var(--background-color-gradient1), var(--background-color-gradient2));
+    border: none;
 }
